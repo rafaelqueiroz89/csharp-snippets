@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:5100
+
+### 1. Login as standard user
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "pass"
+}
+
+### 2. Access protected endpoint as standard user
+GET {{baseUrl}}/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InVzZXIiLCJwcmVtaXVtIjoiZmFsc2UiLCJleHAiOjE3NDcwMDk3MDgsImlzcyI6IkRlbW9Jc3N1ZXIiLCJhdWQiOiJEZW1vQXVkaWVuY2UifQ.SKOUhk8YzmQVdeiaJROC42X07IIBCTdNkptFJ_qsHME
